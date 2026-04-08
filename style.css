@@ -106,16 +106,18 @@ a:hover {
   width: 88px;
   height: 88px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #2563eb, #4a9eff);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  font-weight: 700;
-  color: #fff;
-  letter-spacing: 1px;
   margin: 0 auto 20px;
+  overflow: hidden;
   box-shadow: 0 0 0 4px rgba(74, 158, 255, 0.2);
+  background: #1a1a1a;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 .hero h1 {
