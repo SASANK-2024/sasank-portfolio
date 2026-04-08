@@ -212,6 +212,17 @@ a:hover {
 }
 
 /* ===========================
+   CAREER OBJECTIVE
+=========================== */
+.objective-text {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.75;
+  border-left: 2px solid var(--blue);
+  padding-left: 14px;
+}
+
+/* ===========================
    SKILL PILLS
 =========================== */
 .skills {
