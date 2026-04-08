@@ -97,16 +97,16 @@ a:hover {
    HERO
 =========================== */
 .hero {
-  text-align: center;
+  text-align: left;
   padding-bottom: 8px;
 }
 
 /* AVATAR */
 .avatar {
-  width: 88px;
-  height: 88px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
-  margin: 0 auto 20px;
+  margin: 0 0 20px 0;
   overflow: hidden;
   box-shadow: 0 0 0 4px rgba(74, 158, 255, 0.2);
   background: #1a1a1a;
@@ -121,7 +121,7 @@ a:hover {
 }
 
 .hero h1 {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
   color: var(--text);
   margin-bottom: 4px;
@@ -129,14 +129,14 @@ a:hover {
 
 .aka {
   font-size: 15px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   color: var(--muted);
 }
 
 .location {
   font-size: 14px;
   color: var(--muted);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .pin {
@@ -146,7 +146,7 @@ a:hover {
 .role {
   font-size: 14px;
   color: var(--muted);
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 /* ===========================
@@ -162,7 +162,7 @@ a:hover {
 .social-buttons {
   display: flex;
   gap: 10px;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   margin-top: 4px;
 }
@@ -506,9 +506,8 @@ a:hover {
   }
 
   .avatar {
-    width: 72px;
-    height: 72px;
-    font-size: 22px;
+    width: 88px;
+    height: 88px;
   }
 
   .social-buttons {
