@@ -1,0 +1,505 @@
+/* ===========================
+   RESET & BASE
+=========================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #111111;
+  --surface: #1a1a1a;
+  --border: #2a2a2a;
+  --text: #e5e5e5;
+  --muted: #888888;
+  --blue: #4a9eff;
+  --blue-dim: rgba(74, 158, 255, 0.12);
+  --radius: 8px;
+  --transition: 0.2s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+  transition: opacity var(--transition);
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* ===========================
+   LAYOUT
+=========================== */
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+}
+
+.section {
+  margin-top: 52px;
+}
+
+/* ===========================
+   HERO
+=========================== */
+.hero {
+  text-align: center;
+  padding-bottom: 8px;
+}
+
+/* AVATAR */
+.avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563eb, #4a9eff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+  margin: 0 auto 20px;
+  box-shadow: 0 0 0 4px rgba(74, 158, 255, 0.2);
+}
+
+.hero h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.aka {
+  font-size: 15px;
+  margin-bottom: 8px;
+  color: var(--muted);
+}
+
+.location {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.pin {
+  margin-right: 2px;
+}
+
+.role {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+/* ===========================
+   UTILITY
+=========================== */
+.blue {
+  color: var(--blue);
+}
+
+/* ===========================
+   SOCIAL BUTTONS
+=========================== */
+.social-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 18px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: border-color var(--transition), background var(--transition), color var(--transition), transform var(--transition);
+}
+
+.btn:hover {
+  border-color: var(--blue);
+  background: var(--blue-dim);
+  color: var(--blue);
+  transform: translateY(-1px);
+  opacity: 1;
+}
+
+.btn svg {
+  flex-shrink: 0;
+}
+
+/* ===========================
+   SECTION TITLES
+=========================== */
+.section-title {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+
+.hint {
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ===========================
+   SKILL PILLS
+=========================== */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  transition: border-color var(--transition), color var(--transition), background var(--transition);
+}
+
+.pill:hover {
+  border-color: var(--blue);
+  color: var(--text);
+}
+
+.pill.active {
+  border-color: var(--blue);
+  color: var(--blue);
+  background: var(--blue-dim);
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--muted);
+  flex-shrink: 0;
+  transition: background var(--transition);
+}
+
+.pill.active .dot {
+  background: var(--blue);
+}
+
+/* ===========================
+   PROJECTS
+=========================== */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.project-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+  transition: opacity var(--transition);
+}
+
+.project-row:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.project-row.hidden {
+  display: none;
+}
+
+.project-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.project-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.project-desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.65;
+  margin-bottom: 12px;
+}
+
+.project-built {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.built-label {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  margin-right: 2px;
+}
+
+.tag {
+  padding: 2px 9px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--muted);
+  font-size: 12px;
+  background: var(--surface);
+}
+
+.project-right {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.project-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+}
+
+/* ===========================
+   EDUCATION
+=========================== */
+.edu-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.edu-degree {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.edu-school {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.edu-right {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.edu-year {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+
+.edu-cgpa {
+  font-size: 13px;
+  color: var(--blue);
+  font-weight: 600;
+}
+
+/* ===========================
+   CERTIFICATIONS
+=========================== */
+.cert-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.cert-row:first-of-type {
+  border-top: 1px solid var(--border);
+}
+
+.cert-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+  width: 36px;
+  text-align: center;
+}
+
+.cert-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.cert-issuer {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ===========================
+   ACHIEVEMENTS
+=========================== */
+.achievements-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.achievements-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.blue-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--blue);
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+.ach-title {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+.footer {
+  margin-top: 60px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.footer-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.footer-email {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ===========================
+   RESPONSIVE — MOBILE
+=========================== */
+@media (max-width: 600px) {
+  .container {
+    padding: 32px 16px 48px;
+  }
+
+  .hero h1 {
+    font-size: 20px;
+  }
+
+  .avatar {
+    width: 72px;
+    height: 72px;
+    font-size: 22px;
+  }
+
+  .social-buttons {
+    gap: 8px;
+  }
+
+  .btn {
+    padding: 7px 13px;
+    font-size: 12px;
+  }
+
+  .project-row {
+    flex-direction: column-reverse;
+    gap: 12px;
+  }
+
+  .project-right {
+    align-self: flex-end;
+  }
+
+  .edu-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .edu-right {
+    text-align: left;
+  }
+
+  .project-logo {
+    width: 44px;
+    height: 44px;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero h1 {
+    font-size: 18px;
+  }
+
+  .section-title {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maramreddy Sasank Reddy — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="avatar">SR</div>
+      <h1>Hi, I'm Maramreddy Sasank Reddy</h1>
+      <p class="aka"><span class="blue">(AKA SasankDev)</span></p>
+      <p class="location">
+        <span class="pin">📍</span> Guntur, Andhra Pradesh, India
+      </p>
+      <p class="role">B.Tech CSE @ KL University &middot; CGPA 8.9</p>
+
+      <!-- SOCIAL BUTTONS -->
+      <div class="social-buttons">
+        <a href="https://drive.google.com" target="_blank" class="btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+          Resume
+        </a>
+        <a href="https://github.com/SASANK-2024" target="_blank" class="btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/maramreddy-sasank-reddy-5a2647294/" target="_blank" class="btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="mailto:sasankdev29@gmail.com" class="btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          Gmail
+        </a>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section">
+      <h2 class="section-title blue">skills <span class="hint">(select the skills)</span></h2>
+      <div class="skills">
+        <label class="pill active" data-skill="all">
+          <span class="dot"></span> All
+          <input type="radio" name="skill" value="all" checked hidden />
+        </label>
+        <label class="pill" data-skill="java">
+          <span class="dot"></span> Java
+          <input type="radio" name="skill" value="java" hidden />
+        </label>
+        <label class="pill" data-skill="javascript">
+          <span class="dot"></span> JavaScript
+          <input type="radio" name="skill" value="javascript" hidden />
+        </label>
+        <label class="pill" data-skill="react">
+          <span class="dot"></span> React.js
+          <input type="radio" name="skill" value="react" hidden />
+        </label>
+        <label class="pill" data-skill="nodejs">
+          <span class="dot"></span> Node.js
+          <input type="radio" name="skill" value="nodejs" hidden />
+        </label>
+        <label class="pill" data-skill="springboot">
+          <span class="dot"></span> Spring Boot
+          <input type="radio" name="skill" value="springboot" hidden />
+        </label>
+        <label class="pill" data-skill="mysql">
+          <span class="dot"></span> MySQL
+          <input type="radio" name="skill" value="mysql" hidden />
+        </label>
+        <label class="pill" data-skill="mongodb">
+          <span class="dot"></span> MongoDB
+          <input type="radio" name="skill" value="mongodb" hidden />
+        </label>
+        <label class="pill" data-skill="aws">
+          <span class="dot"></span> AWS
+          <input type="radio" name="skill" value="aws" hidden />
+        </label>
+        <label class="pill" data-skill="cicd">
+          <span class="dot"></span> CI/CD
+          <input type="radio" name="skill" value="cicd" hidden />
+        </label>
+        <label class="pill" data-skill="dsa">
+          <span class="dot"></span> DSA
+          <input type="radio" name="skill" value="dsa" hidden />
+        </label>
+        <label class="pill" data-skill="restapi">
+          <span class="dot"></span> REST APIs
+          <input type="radio" name="skill" value="restapi" hidden />
+        </label>
+        <label class="pill" data-skill="jwt">
+          <span class="dot"></span> JWT
+          <input type="radio" name="skill" value="jwt" hidden />
+        </label>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section">
+      <h2 class="section-title blue">projects</h2>
+      <div class="projects">
+
+        <div class="project-row" data-tags="java,springboot,javascript,mysql,restapi">
+          <div class="project-left">
+            <h3 class="project-name">Expense Splitter</h3>
+            <p class="project-desc">
+              Group-based expense management system (Splitwise clone).
+              Optimized debt simplification using a greedy graph algorithm
+              to minimize transactions between users.
+            </p>
+            <p class="project-built">
+              <span class="built-label">BUILT WITH:</span>
+              <span class="tag">Java</span>
+              <span class="tag">Spring Boot</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">REST APIs</span>
+            </p>
+          </div>
+          <div class="project-right">
+            <div class="project-logo">💸</div>
+          </div>
+        </div>
+
+        <div class="project-row" data-tags="java,springboot,mysql,javascript">
+          <div class="project-left">
+            <h3 class="project-name">URL Shortener with Analytics</h3>
+            <p class="project-desc">
+              Scalable URL shortener using Base62 encoding with link expiry,
+              caching, and click tracking. Real-time analytics dashboard
+              with daily and weekly insights.
+            </p>
+            <p class="project-built">
+              <span class="built-label">BUILT WITH:</span>
+              <span class="tag">Java</span>
+              <span class="tag">Spring Boot</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">JavaScript</span>
+            </p>
+          </div>
+          <div class="project-right">
+            <div class="project-logo">🔗</div>
+          </div>
+        </div>
+
+        <div class="project-row" data-tags="java,springboot,mysql,javascript,jwt,restapi">
+          <div class="project-left">
+            <h3 class="project-name">Employee Management System</h3>
+            <p class="project-desc">
+              Full-stack web app with role-based access control and
+              JWT authentication. Optimized MySQL queries improved
+              response time by 20%.
+            </p>
+            <p class="project-built">
+              <span class="built-label">BUILT WITH:</span>
+              <span class="tag">Java</span>
+              <span class="tag">Spring Boot</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">JWT</span>
+              <span class="tag">JavaScript</span>
+            </p>
+          </div>
+          <div class="project-right">
+            <div class="project-logo">👥</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="section">
+      <h2 class="section-title blue">education</h2>
+      <div class="edu-row">
+        <div class="edu-left">
+          <p class="edu-degree">B.Tech in Computer Science and Engineering</p>
+          <p class="edu-school">KL University, Guntur, Andhra Pradesh</p>
+        </div>
+        <div class="edu-right">
+          <p class="edu-year">2023 – 2027</p>
+          <p class="edu-cgpa">CGPA: 8.9 / 10</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS SECTION -->
+    <section class="section">
+      <h2 class="section-title blue">certifications</h2>
+
+      <div class="cert-row">
+        <div class="cert-icon">☁️</div>
+        <div class="cert-info">
+          <p class="cert-name">AWS Certified Cloud Practitioner</p>
+          <p class="cert-issuer">Amazon Web Services</p>
+        </div>
+      </div>
+
+      <div class="cert-row">
+        <div class="cert-icon">🍃</div>
+        <div class="cert-info">
+          <p class="cert-name">MongoDB Associate Developer</p>
+          <p class="cert-issuer">MongoDB · Node.js Track</p>
+        </div>
+      </div>
+
+      <div class="cert-row">
+        <div class="cert-icon">🌐</div>
+        <div class="cert-info">
+          <p class="cert-name">Cambridge Linguaskill</p>
+          <p class="cert-issuer">Cambridge Assessment English</p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ACHIEVEMENTS SECTION -->
+    <section class="section">
+      <h2 class="section-title blue">achievements</h2>
+      <ul class="achievements-list">
+        <li>
+          <span class="blue-dot"></span>
+          <div>
+            <span class="ach-title">Technical Lead, Websico Club</span> —
+            Led AI and web development initiatives, mentored team members,
+            conducted workshops on chatbot development and automation.
+          </div>
+        </li>
+        <li>
+          <span class="blue-dot"></span>
+          <div>
+            <span class="ach-title">GDG Hyderabad Agentathon 2025</span> —
+            Contributed to an AI-based solution in a world record-setting
+            hackathon with 2300+ participants.
+          </div>
+        </li>
+        <li>
+          <span class="blue-dot"></span>
+          <div>
+            <span class="ach-title">Smart India Hackathon — Internal Round</span> —
+            Designed a web platform enabling farmers to connect directly with
+            vendors, improving pricing transparency.
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p class="footer-name">Maramreddy Sasank Reddy</p>
+      <p class="footer-email">
+        <a href="mailto:sasankdev29@gmail.com" class="blue">sasankdev29@gmail.com</a>
+      </p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
